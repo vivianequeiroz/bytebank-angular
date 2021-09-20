@@ -13,9 +13,7 @@ export class NewTransferComponent implements OnInit {
 
 	constructor() {}
 
-	ngOnInit(): void {
-		this.transfer();
-	}
+	ngOnInit(): void {}
 
 	transfer(): void {
 		const transfersData = { value: this.value, account: this.account };
