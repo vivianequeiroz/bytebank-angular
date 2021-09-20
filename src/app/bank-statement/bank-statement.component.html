@@ -1,15 +1,21 @@
 <section class="container">
-	<table>
-		<thead>
-			<th>Valor</th>
-			<th>Conta destino</th>
-			<th>Data</th>
+	<h2 class="title">Histórico de Transferências</h2>
+	<table class="table">
+		<thead class="table__header">
+			<th class="table__header__content">Valor</th>
+			<th class="table__header__content">Conta destino</th>
+			<th class="table__header__content">Data</th>
 		</thead>
 		<tbody>
-			<tr *ngFor="let transferReceived of transfersReceived">
-				<td>{{ transferReceived.value | currency }}</td>
-				<td>{{ transferReceived.account }}</td>
-				<td>{{ transferReceived.date | date: "short" }}</td>
+			<tr
+				class="tabela__line"
+				*ngFor="let transferReceived of transfersReceived"
+			>
+				<td class="table__content">{{ transferReceived.value | currency }}</td>
+				<td class="table__content">{{ transferReceived.account }}</td>
+				<td class="table__content">
+					{{ transferReceived.date | date: "short" }}
+				</td>
 			</tr>
 		</tbody>
 	</table>
