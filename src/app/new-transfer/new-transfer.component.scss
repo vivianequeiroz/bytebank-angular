@@ -1,9 +1,9 @@
 .form {
-	background-color: white;
+	background-color: rgb(241, 241, 241);
 	padding: 16px;
 	border-radius: 4px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-	&__titulo {
+	&__title {
 		text-transform: capitalize;
 		color: var(--primary);
 	}
@@ -38,7 +38,7 @@
 
 .button {
 	background-color: var(--primary);
-	color: white;
+	color: #fff;
 	display: block;
 	flex: 1;
 	border: none;
