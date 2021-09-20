@@ -18,9 +18,9 @@ export class NewTransferComponent implements OnInit {
 	}
 
 	transfer(): void {
-		const transferData = { value: this.value, account: this.account };
+		const transfersData = { value: this.value, account: this.account };
 
-		this.atTansfer.emit(transferData);
+		this.atTansfer.emit(transfersData);
 		this.cleanFields();
 	}
 
