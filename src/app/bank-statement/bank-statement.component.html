@@ -6,7 +6,7 @@
 			<th class="table__header__content">Conta destino</th>
 			<th class="table__header__content">Data</th>
 		</thead>
-		<tbody>
+		<tbody *ngIf="!!transactionsReceived; else emptyList">
 			<tr
 				class="tabela__line"
 				*ngFor="let transactionReceived of transactionsReceived"
@@ -21,4 +21,7 @@
 			</tr>
 		</tbody>
 	</table>
+	<ng-template #emptyList>
+		<p>Sem histórico de transações até o momento.</p>
+	</ng-template>
 </section>

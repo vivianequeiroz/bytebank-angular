@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from "@angular/core";
 	styleUrls: ["./bank-statement.component.scss"],
 })
 export class BankStatementComponent implements OnInit {
-	@Input() transactionsReceived: any[] = [];
+	@Input()
+	transactionsReceived!: any[];
 
 	constructor() {}
 

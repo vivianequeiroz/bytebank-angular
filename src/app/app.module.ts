@@ -3,14 +3,14 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
-import { NewTransferComponent } from "./new-transfer/new-transfer.component";
+import { NewTransactionComponent } from "./new-transaction/new-transaction.component";
 import { BankStatementComponent } from "./bank-statement/bank-statement.component";
 import localePt from "@angular/common/locales/pt";
 import { registerLocaleData } from "@angular/common";
 
 registerLocaleData(localePt, "pt");
 @NgModule({
-	declarations: [AppComponent, NewTransferComponent, BankStatementComponent],
+	declarations: [AppComponent, NewTransactionComponent, BankStatementComponent],
 	imports: [BrowserModule, FormsModule],
 	providers: [
 		{ provide: LOCALE_ID, useValue: "pt" },

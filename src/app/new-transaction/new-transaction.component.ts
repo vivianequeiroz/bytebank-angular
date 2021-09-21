@@ -15,10 +15,9 @@ export class NewTransactionComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	transfer(): void {
-		const transfersData = { value: this.value, account: this.account };
-
-		this.atTransaction.emit(transfersData);
+	transaction(): void {
+		const transactionsData = { value: this.value, account: this.account };
+		this.atTransaction.emit(transactionsData);
 		this.cleanFields();
 	}
 
