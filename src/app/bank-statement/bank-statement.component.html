@@ -9,12 +9,14 @@
 		<tbody>
 			<tr
 				class="tabela__line"
-				*ngFor="let transferReceived of transfersReceived"
+				*ngFor="let transactionReceived of transactionsReceived"
 			>
-				<td class="table__content">{{ transferReceived.value | currency }}</td>
-				<td class="table__content">{{ transferReceived.account }}</td>
 				<td class="table__content">
-					{{ transferReceived.date | date: "short" }}
+					{{ transactionReceived.value | currency }}
+				</td>
+				<td class="table__content">{{ transactionReceived.account }}</td>
+				<td class="table__content">
+					{{ transactionReceived.date | date: "short" }}
 				</td>
 			</tr>
 		</tbody>

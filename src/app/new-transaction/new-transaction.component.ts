@@ -1,12 +1,12 @@
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 
 @Component({
-	selector: "app-new-transfer",
-	templateUrl: "./new-transfer.component.html",
-	styleUrls: ["./new-transfer.component.scss"],
+	selector: "app-new-transaction",
+	templateUrl: "./new-transaction.component.html",
+	styleUrls: ["./new-transaction.component.scss"],
 })
-export class NewTransferComponent implements OnInit {
-	@Output() atTansfer = new EventEmitter<any>();
+export class NewTransactionComponent implements OnInit {
+	@Output() atTransaction = new EventEmitter<any>();
 
 	value: any;
 	account: any;
@@ -18,7 +18,7 @@ export class NewTransferComponent implements OnInit {
 	transfer(): void {
 		const transfersData = { value: this.value, account: this.account };
 
-		this.atTansfer.emit(transfersData);
+		this.atTransaction.emit(transfersData);
 		this.cleanFields();
 	}
 

@@ -8,11 +8,11 @@ import { Component } from "@angular/core";
 export class AppComponent {
 	title = "bytebank";
 
-	transfersReceived: any[] = [];
+	transactionsReceived: any[] = [];
 
-	transfer($event: any) {
+	transaction($event: any) {
 		console.log("Data received: ", $event);
-		const transfer = { ...$event, date: new Date() };
-		this.transfersReceived.push(transfer);
+		const transaction = { ...$event, date: new Date() };
+		this.transactionsReceived.push(transaction);
 	}
 }
