@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { TransactionService } from "../services/transaction.service";
 
 @Component({
 	selector: "app-bank-statement",
@@ -9,7 +10,10 @@ export class BankStatementComponent implements OnInit {
 	@Input()
 	transactionsReceived!: any[];
 
-	constructor() {}
+	constructor(private transactionService: TransactionService) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.transactionsReceived = this.transactionService.transactionsData;
+		console.log(this.transactionsReceived);
+	}
 }

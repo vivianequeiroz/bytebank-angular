@@ -1,4 +1,4 @@
-<app-new-transaction (atTansfer)="transaction($event)"></app-new-transaction>
-<app-bank-statement
-	[transactionsReceived]="transactionsReceived"
-></app-bank-statement>
+<app-new-transaction
+	(atTransaction)="transaction($event)"
+></app-new-transaction>
+<app-bank-statement></app-bank-statement>
