@@ -10,7 +10,7 @@ export class TransactionService {
 		this.transactionsList = [];
 	}
 
-	get transactionsData() {
+	getTransactionsData() {
 		return this.transactionsList;
 	}
 
