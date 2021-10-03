@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { TransactionService } from "./services/transaction.service";
 
 @Component({
 	selector: "app-root",
@@ -8,11 +9,9 @@ import { Component } from "@angular/core";
 export class AppComponent {
 	title = "bytebank";
 
-	transactionsReceived: any[] = [];
+	constructor(private transactionService: TransactionService) {}
 
-	transaction($event: any) {
-		console.log("Data received: ", $event);
-		const transaction = { ...$event, date: new Date() };
-		this.transactionsReceived.push(transaction);
+	toTransact($event: any) {
+		this.transactionService.addTransaction($event);
 	}
 }
