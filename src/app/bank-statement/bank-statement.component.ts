@@ -7,13 +7,11 @@ import { TransactionService } from "../services/transaction.service";
 	styleUrls: ["./bank-statement.component.scss"],
 })
 export class BankStatementComponent implements OnInit {
-	@Input()
 	transactionsReceived!: any[];
 
 	constructor(private transactionService: TransactionService) {}
 
 	ngOnInit(): void {
-		this.transactionsReceived = this.transactionService.transactionsData;
-		console.log(this.transactionsReceived);
+		this.transactionsReceived = this.transactionService.getTransactionsData();
 	}
 }

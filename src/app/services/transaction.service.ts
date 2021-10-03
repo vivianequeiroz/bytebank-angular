@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 	providedIn: "root",
 })
 export class TransactionService {
-	private transactionsList: any;
+	private transactionsList: any[];
 
 	constructor() {
 		this.transactionsList = [];
