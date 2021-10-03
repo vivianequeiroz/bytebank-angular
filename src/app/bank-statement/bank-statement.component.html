@@ -6,7 +6,7 @@
 			<th class="table__header__content">Conta destino</th>
 			<th class="table__header__content">Data</th>
 		</thead>
-		<tbody *ngIf="!!transactionsReceived; else emptyList">
+		<tbody *ngIf="transactionsReceived.length > 0; else emptyList">
 			<tr
 				class="tabela__line"
 				*ngFor="let transactionReceived of transactionsReceived"
