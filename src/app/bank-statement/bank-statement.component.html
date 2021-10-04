@@ -12,9 +12,9 @@
 				*ngFor="let transactionReceived of transactionsReceived"
 			>
 				<td class="table__content">
-					{{ transactionReceived.value | currency }}
+					{{ transactionReceived.amount | currency }}
 				</td>
-				<td class="table__content">{{ transactionReceived.account }}</td>
+				<td class="table__content">{{ transactionReceived.destinyAccount }}</td>
 				<td class="table__content">
 					{{ transactionReceived.date | date: "short" }}
 				</td>
