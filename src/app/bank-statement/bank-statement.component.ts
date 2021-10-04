@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { Transaction } from "../models/transaction.model";
 import { TransactionService } from "../services/transaction.service";
 
 @Component({
@@ -12,6 +13,11 @@ export class BankStatementComponent implements OnInit {
 	constructor(private transactionService: TransactionService) {}
 
 	ngOnInit(): void {
-		this.transactionsReceived = this.transactionService.getTransactionsData();
+		this.transactionService
+			.getAllTransactions()
+			.subscribe((transactionsReceived: Transaction[]) => {
+				console.table(transactionsReceived);
+				this.transactionsReceived = transactionsReceived;
+			});
 	}
 }
